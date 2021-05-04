@@ -1,0 +1,37 @@
+﻿<!doctype html>
+<html>
+<head>
+<link rel="stylesheet"
+	href="{{url_for('static',filename='style.css')}}">
+</head>
+
+<body bgcolor="orange" text="black">
+</body>
+<body>
+<font face="ＭＳ 明朝"  size="7" color="black">
+<center><b>あなたにおすすめの日本酒を提案します</b></center></font>
+
+ 
+<!--<h1>    <center>                    <img src="drink_sake_sakaduki_sakura.png" width="600" height="300"></center></h1>
+-->
+<font face="ＭＳ 明朝" size="6" color="black">
+<center><b>どんな日本酒を飲みたいですか？</b></center></font>
+<font face="ＭＳ 明朝" size="4" color="black">
+<center><b>(～でないのような表現・絵文字・記号はご遠慮ください)</b></center>
+<center><b>(漢字で書くべき文字は漢字で入力してください)</b></center></font>
+<br>
+<center><b>入力例｜「甘口」,「フルーティーな香り」,「初心者向け」…</b></center>
+<center>
+{% from "_formhelpers.html" import render_field %}
+
+<form method=post action="/results">
+<dl>
+{{render_field(form.sakereview,cols='30',rows='10')}}
+</dl>
+<div>
+<input type=submit value='送信' name='submit_btn'>
+</div>
+</center>
+</form>
+</body>
+</html>

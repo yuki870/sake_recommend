@@ -1,0 +1,54 @@
+﻿<!doctype html>
+
+<html>
+
+  <head>
+
+    <title>Sake Classification</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  </head>
+
+  <body>
+<body bgcolor="orange" text="black">
+<form  method="post" action="/thanks">
+<h3><font face="ＭＳ 明朝" size="7">
+<center><b>お客様アンケート</b></center></font></h3>
+
+<center><b>
+<table>
+
+<tr>
+ <td>
+   <br><strong><font face="ＭＳ 明朝" size="5" color="blue">①このサイトは</font></strong>
+ </td>
+</tr>
+<tr></tr>
+<tr>
+ <td>
+<br>
+    <input type="radio" name="満足度" value="満足でない">満足でない 
+    <input type="radio" name="満足度" value="あまり満足でない">あまり満足でない 
+    <input type="radio" name="満足度" value="普通">普通
+    <input type="radio" name="満足度" value="やや満足">やや満足
+    <input type="radio" name="満足度" value="とても満足">とても満足
+ </td>
+</tr>
+<tr>
+    <td colspan="4">
+      <br><br><strong><font face="ＭＳ 明朝" size="5" color="blue">②何かご意見、要望がありましたらご記入ください</font></strong>
+    <br>
+    <br>
+      <textarea name="メッセージ" rows="5" cols="75"></textarea>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+    <center><b><input type="submit" value="送信"></b></center>
+    </td>
+</form>
+</table>
+</b></center>
+</body>
+</html>

@@ -1,0 +1,63 @@
+﻿
+<!doctype html>
+
+<html>
+
+  <head>
+
+    <title>Sake Classification</title>
+
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+  </head>
+
+  <body>
+<body bgcolor="orange" text="black">
+</body>
+<center><h3>あなたの入力:</h3></center>
+<center><div>{{content}}</div></center>
+
+
+<div></div>
+<h3 style="text-align: center;">あなたにおすすめな日本酒は</h3>
+
+{% for meigara,review in data %}
+
+<div></div>
+<center><div><strong><font size="5">銘柄名:{{ meigara }}</font></strong></div></center>
+
+<center><div>レビュー: {{ review }}</div></center>
+{% endfor %}
+
+<center><b>お酒を購入する</b></center></font></h3>
+
+<center><b><a href="https://www.amazon.co.jp/?tag=hydjpabky-22&hvadid=386686426934&ref=pd_sl_8eaqjij3p1_e
+" target="_blank" rel="noopener">https://www.amazon.co.jp/?tag=hydjpabky-22&hvadid=386686426934&ref=pd_sl_8eaqjij3p1_e
+</a></b></center>
+<br>
+<form action="/">
+<center><b><input type="submit"  value="もう一度探す"></b></center>
+</form>
+
+<form  action="/questionnaire">
+<br>
+<h3><font face="ＭＳ 明朝" size="5">
+<center><b>この情報はお役に立ちましたか？</b></center></font></h3>
+<h3><font face="ＭＳ 明朝" size="4" color="green">
+<center><b>お客様のご意見をお聞かせください</b></center></font></h3>
+<h3><font face="ＭＳ 明朝" size="3">
+<center><input type=submit value='アンケートを入力する' name='questionnaire_btn'></center></form>
+<!--
+<div id='button' style="text-align: center;">
+
+	  <form action="/">
+
+	       <input type=submit value='戻る'>
+
+	  </form>
+
+</div>
+-->
+</body>
+
+</html>
